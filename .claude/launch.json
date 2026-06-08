@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "UX-CC-Trial",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3001", "/Users/akankshaagarwal/Explorations/UX-CC-Trial"],
+      "port": 3001
+    }
+  ]
+}
