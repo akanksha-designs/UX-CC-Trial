@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Process — UX-CC-Trial</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="process.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">AK</a>
+      <ul class="nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="process.html" style="color: var(--color-text);">Process</a></li>
+        <li><a href="demo.html">Demo</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="process-main">
+    <div class="process-hero">
+      <p class="hero-label">Designer Workflow · Vibe-Coding · Design System</p>
+      <h1 class="hero-heading">How I work with Claude<br /><em>from Figma to production.</em></h1>
+      <p class="process-hero-sub">A real, end-to-end workflow — no hand-off, no in-between. Design changes go from Figma into code, reviewed on localhost, and deployed to Vercel in a single session.</p>
+    </div>
+
+    <div class="steps">
+
+      <!-- Step 1 -->
+      <article class="step">
+        <div class="step-meta">
+          <span class="step-number">01</span>
+          <span class="step-tag">Access</span>
+        </div>
+        <div class="step-content">
+          <h2>Connect with GitHub</h2>
+          <p>Before anything else, you need access to the GitHub repository where the codebase lives. GitHub is the source of truth for all code — it tracks every change, who made it, and why.</p>
+          <div class="step-block">
+            <p class="step-block-label">What to do</p>
+            <ol>
+              <li>Create a GitHub account at <strong>github.com</strong> if you don't have one</li>
+              <li>Ask the repo owner to add you as a collaborator (Settings → Collaborators)</li>
+              <li>Generate a <strong>Personal Access Token</strong> — GitHub no longer accepts passwords<br />
+                <span class="muted">Profile → Settings → Developer Settings → Tokens (classic) → repo scope</span></li>
+              <li>Save the token somewhere safe — you'll use it as your password in the terminal</li>
+            </ol>
+          </div>
+          <img src="images/step1-github-pat.svg" alt="GitHub Personal Access Token settings page" class="step-img" />
+        </div>
+      </article>
+
+      <!-- Step 2 -->
+      <article class="step">
+        <div class="step-meta">
+          <span class="step-number">02</span>
+          <span class="step-tag">Setup</span>
+        </div>
+        <div class="step-content">
+          <h2>Connect Claude to Figma via MCP</h2>
+          <p>MCP (Model Context Protocol) lets Claude read your Figma files directly — components, tokens, styles, and layouts — so it can translate design intent into code without you copy-pasting values.</p>
+          <div class="step-block">
+            <p class="step-block-label">Steps to connect</p>
+            <ol>
+              <li>Open Claude Desktop → <strong>Settings → Developer → Edit Config</strong></li>
+              <li>Add the Figma MCP server to your config:
+                <pre><code>{
+  "mcpServers": {
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "figma-developer-mcp", "--figma-api-key=YOUR_KEY"]
+    }
+  }
+}</code></pre>
+              </li>
+              <li>Get your Figma API key → <strong>Figma → Profile → Settings → Personal access tokens</strong></li>
+              <li>Restart Claude Desktop — you'll see a Figma plug icon in the toolbar when it's connected</li>
+            </ol>
+          </div>
+          <img src="images/step2-mcp-config.svg" alt="Claude Desktop MCP server config with Figma" class="step-img" />
+          <div class="step-callout">
+            <span class="callout-icon">→</span>
+            Once connected, you can share a Figma frame URL with Claude and it reads the design directly — colours, spacing, component names, and variables.
+          </div>
+        </div>
+      </article>
+
+      <!-- Step 3 -->
+      <article class="step">
+        <div class="step-meta">
+          <span class="step-number">03</span>
+          <span class="step-tag">Local Setup</span>
+        </div>
+        <div class="step-content">
+          <h2>Clone the repo &amp; set up locally</h2>
+          <p>To make changes, you need a local copy of the code on your machine. This is called "cloning." Once cloned, Claude Code can read and edit the files directly.</p>
+          <div class="step-block">
+            <p class="step-block-label">Terminal commands — run these once</p>
+            <pre><code># 1. Navigate to where you want the project
+cd /Users/yourname/Explorations
+
+# 2. Clone the repo (copy from GitHub to your machine)
+git clone https://github.com/your-org/your-repo.git
+
+# 3. Move into the project folder
+cd your-repo
+
+# 4. Confirm git knows who you are
+git config user.name "Your Name"
+git config user.email "you@example.com"
+
+# 5. Start the local dev server
+python3 -m http.server 3001</code></pre>
+          </div>
+          <div class="step-block">
+            <p class="step-block-label">Connect Claude Code to the project</p>
+            <ol>
+              <li>Open Claude Code (desktop app or <code>claude</code> in terminal)</li>
+              <li>Open the project folder — Claude now has full read/write access to all files</li>
+              <li>Claude can run terminal commands, edit files, and preview changes — all from the chat</li>
+            </ol>
+          </div>
+          <img src="images/step3-git-clone.svg" alt="Terminal showing git clone and setup commands" class="step-img" />
+        </div>
+      </article>
+
+      <!-- Step 4 -->
+      <article class="step">
+        <div class="step-meta">
+          <span class="step-number">04</span>
+          <span class="step-tag">Branching</span>
+        </div>
+        <div class="step-content">
+          <h2>Branch out for every change</h2>
+          <p>A branch is an isolated copy of the code where you can make changes safely — without affecting the live site or anyone else's work. Think of it like working on a duplicate Figma file before merging changes into the main one.</p>
+          <div class="step-callout">
+            <span class="callout-icon">→</span>
+            <strong>Why it matters:</strong> If something breaks on your branch, <code>main</code> (production) is untouched. Every branch also gets its own Vercel preview URL — so stakeholders can review before anything goes live.
+          </div>
+          <div class="step-block">
+            <p class="step-block-label">Create a branch for your change</p>
+            <pre><code># Always start from the latest main
+git checkout main
+git pull origin main
+
+# Create and switch to a new branch
+git checkout -b design/your-change-name
+
+# Example:
+git checkout -b design/update-hero-colours</code></pre>
+          </div>
+          <div class="step-block">
+            <p class="step-block-label">Branch naming convention</p>
+            <ul>
+              <li><code>design/hero-typography</code> — visual/layout change</li>
+              <li><code>design/colour-tokens</code> — design system update</li>
+              <li><code>fix/nav-mobile</code> — bug fix</li>
+            </ul>
+          </div>
+          <img src="images/step4-branching.svg" alt="Terminal showing git branch commands" class="step-img" />
+        </div>
+      </article>
+
+      <!-- Step 5 -->
+      <article class="step">
+        <div class="step-meta">
+          <span class="step-number">05</span>
+          <span class="step-tag">Vibe-Coding</span>
+        </div>
+        <div class="step-content">
+          <h2>Feed Figma into Claude &amp; vibe-code the changes</h2>
+          <p>This is the core of the workflow. You share your Figma design — colour tokens, component specs, or a full frame — with Claude, describe what you want changed, and Claude edits the actual code files.</p>
+          <div class="step-block">
+            <p class="step-block-label">What to share with Claude</p>
+            <ul>
+              <li><strong>Figma frame URL</strong> — Claude reads layout, spacing, and component structure via MCP</li>
+              <li><strong>Colour tokens</strong> — paste the variable list from Figma or share the Variables panel</li>
+              <li><strong>Design system components</strong> — share the component URL and Claude maps it to code</li>
+              <li><strong>Screenshots</strong> — for quick visual changes Claude can infer from the image</li>
+            </ul>
+          </div>
+          <div class="step-block">
+            <p class="step-block-label">Example prompts</p>
+            <pre><code>"Update the hero heading colour to match the Primary/500
+token from this Figma frame: [url]"
+
+"The card component in Figma uses 16px padding,
+border-radius 12px, and a 1px #2a2a30 border.
+Apply that to .card in style.css"
+
+"Here are the new colour tokens from Figma — replace
+all the hardcoded hex values in style.css with these
+CSS variables"</code></pre>
+          </div>
+          <div class="step-callout">
+            <span class="callout-icon">→</span>
+            Claude edits <code>style.css</code>, <code>index.html</code>, or any file directly. The local server reloads automatically — you see the change instantly at localhost:3001.
+          </div>
+          <img src="images/step5-vibe-coding.svg" alt="Claude Code with Figma tokens split view" class="step-img" />
+        </div>
+      </article>
+
+      <!-- Step 6 -->
+      <article class="step">
+        <div class="step-meta">
+          <span class="step-number">06</span>
+          <span class="step-tag">Review</span>
+        </div>
+        <div class="step-content">
+          <h2>Review on localhost</h2>
+          <p>Before anything is committed, review the change at <strong>http://localhost:3001</strong>. This is your private sandbox — nothing is public yet.</p>
+          <div class="step-block">
+            <p class="step-block-label">What to check</p>
+            <ul>
+              <li>Does it match the Figma design?</li>
+              <li>Does it look right on mobile? (resize the browser to ~375px)</li>
+              <li>Are there any visual regressions elsewhere on the page?</li>
+              <li>Does hover, focus, and scroll behaviour still work?</li>
+            </ul>
+          </div>
+          <p>If something's off — tell Claude. Describe what's wrong or share a screenshot. Claude iterates until it matches.</p>
+          <img src="images/step6-localhost.svg" alt="Browser showing localhost:3001 with live preview" class="step-img" />
+        </div>
+      </article>
+
+      <!-- Step 7 -->
+      <article class="step">
+        <div class="step-meta">
+          <span class="step-number">07</span>
+          <span class="step-tag">Ship</span>
+        </div>
+        <div class="step-content">
+          <h2>Commit, push &amp; open a PR</h2>
+          <p>Once you're happy with the change locally, you save it to GitHub and open a Pull Request — a formal proposal to merge your branch into <code>main</code>.</p>
+          <div class="step-block">
+            <p class="step-block-label">Terminal commands</p>
+            <pre><code># Stage all changed files
+git add .
+
+# Commit with a clear message
+git commit -m "Update hero colours to match Figma Primary/500 token"
+
+# Push your branch to GitHub
+git push -u origin design/update-hero-colours</code></pre>
+          </div>
+          <div class="step-block">
+            <p class="step-block-label">Open the Pull Request</p>
+            <ol>
+              <li>Go to the repo on GitHub — you'll see a yellow banner: <em>"Compare &amp; pull request"</em></li>
+              <li>Click it, fill in the PR template (Figma link + before/after screenshots)</li>
+              <li>Submit — Vercel instantly posts a preview URL as a comment on the PR</li>
+            </ol>
+          </div>
+          <img src="images/step7-commit-push.svg" alt="Terminal showing git commit and push commands" class="step-img" />
+        </div>
+      </article>
+
+      <!-- Step 8 -->
+      <article class="step">
+        <div class="step-meta">
+          <span class="step-number">08</span>
+          <span class="step-tag">Review &amp; Deploy</span>
+        </div>
+        <div class="step-content">
+          <h2>Get the PR reviewed &amp; merge</h2>
+          <p>A reviewer (or you, for solo projects) checks the Vercel preview URL, leaves comments if needed, and approves. Once approved, merge into <code>main</code> — Vercel deploys automatically.</p>
+          <div class="step-block">
+            <p class="step-block-label">Review checklist</p>
+            <ul>
+              <li>Open the Vercel preview URL from the PR comments</li>
+              <li>Compare against the Figma frame linked in the PR</li>
+              <li>Check mobile view on the preview URL</li>
+              <li>Approve → Merge → Delete branch</li>
+            </ul>
+          </div>
+          <div class="step-callout">
+            <span class="callout-icon">→</span>
+            Merging to <code>main</code> triggers a Vercel production deploy. Usually live within 30–60 seconds.
+          </div>
+          <img src="images/step8-pr-vercel.svg" alt="GitHub PR with Vercel preview URL in comments" class="step-img" />
+        </div>
+      </article>
+
+      <!-- Step 9 -->
+      <article class="step">
+        <div class="step-meta">
+          <span class="step-number">09</span>
+          <span class="step-tag">Verify</span>
+        </div>
+        <div class="step-content">
+          <h2>Verify on the deployed version</h2>
+          <p>Always check the live URL after deploy — not just the preview. Production can sometimes behave differently (caching, CDN, environment differences).</p>
+          <div class="step-block">
+            <p class="step-block-label">Final checks</p>
+            <ul>
+              <li>Open the live URL — hard refresh with <code>Cmd+Shift+R</code> to clear cache</li>
+              <li>Check on an actual mobile device, not just a resized browser</li>
+              <li>Confirm the Figma design intent is fully realised</li>
+              <li>Done — loop back to Figma for the next change</li>
+            </ul>
+          </div>
+          <div class="step-callout" style="border-color: var(--color-accent-2); color: var(--color-accent-2);">
+            <span class="callout-icon">→</span>
+            The full loop — Figma to production — typically takes under 30 minutes for a focused visual change.
+          </div>
+          <img src="images/step9-deployed.svg" alt="Live deployed site on Vercel with deploy success banner" class="step-img" />
+        </div>
+      </article>
+
+    </div><!-- /steps -->
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with Figma + Claude Code · <a href="https://ux-cc-trial.vercel.app">ux-cc-trial.vercel.app</a></p>
+    <p class="footer-note">Deployed on Vercel</p>
+  </footer>
+
+</body>
+</html>

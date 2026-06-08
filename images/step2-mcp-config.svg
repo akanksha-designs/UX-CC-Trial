@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <defs>
+    <clipPath id="frame"><rect width="900" height="520" rx="12"/></clipPath>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.4"/></filter>
+  </defs>
+  <rect width="900" height="520" rx="12" fill="#1e1e2e" clip-path="url(#frame)"/>
+  <!-- Chrome bar -->
+  <rect width="900" height="44" fill="#2a2a3a"/>
+  <!-- Traffic lights -->
+  <circle cx="22" cy="22" r="6" fill="#ff5f57"/>
+  <circle cx="42" cy="22" r="6" fill="#febc2e"/>
+  <circle cx="62" cy="22" r="6" fill="#28c840"/>
+  <!-- URL bar -->
+  <rect x="100" y="10" width="700" height="24" rx="12" fill="#13131f"/>
+  <text x="450" y="26" font-family="SF Mono, monospace" font-size="12" fill="#7a7a8a" text-anchor="middle">Claude Desktop → Settings → Developer → Edit Config</text>
+  <!-- Content area -->
+  
+  <!-- Settings modal -->
+  <rect x="60" y="60" width="780" height="430" rx="10" fill="#161620" stroke="#2a2a3a" stroke-width="1"/>
+  <!-- Sidebar -->
+  <rect x="60" y="60" width="180" height="430" rx="10 0 0 10" fill="#13131f"/>
+  <text x="80" y="100" font-family="SF Pro, system-ui" font-size="12" fill="#7a7a8a" font-weight="600">SETTINGS</text>
+  <text x="80" y="130" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">General</text>
+  <text x="80" y="160" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">Appearance</text>
+  <rect x="60" y="170" width="4" height="32" fill="#7c6ef7"/>
+  <rect x="60" y="170" width="180" height="32" fill="rgba(124,110,247,0.1)"/>
+  <text x="80" y="191" font-family="SF Pro, system-ui" font-size="13" fill="#e8e8ed" font-weight="500">Developer</text>
+  <text x="80" y="220" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">Privacy</text>
+
+  <!-- Content -->
+  <text x="270" y="100" font-family="SF Pro, system-ui" font-size="18" fill="#e8e8ed" font-weight="700">Developer Settings</text>
+  <rect x="255" y="115" width="570" height="1" fill="#2a2a3a"/>
+
+  <text x="270" y="148" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">MCP Servers Configuration</text>
+  <rect x="270" y="160" width="530" height="180" rx="8" fill="#0d0d0f" stroke="#2a2a3a" stroke-width="1"/>
+
+  <!-- JSON content -->
+  <text x="292" y="185" font-family="SF Mono, monospace" font-size="12" fill="#7a7a8a">{"{"}</text>
+  <text x="292" y="205" font-family="SF Mono, monospace" font-size="12" fill="#7a7a8a">  "mcpServers"{"{"}</text>
+  <text x="292" y="225" font-family="SF Mono, monospace" font-size="12" fill="#7a7a8a">    "figma": {"{"}</text>
+  <text x="292" y="245" font-family="SF Mono, monospace" font-size="12" fill="#7a7a8a">      "command": </text>
+  <text x="410" y="245" font-family="SF Mono, monospace" font-size="12" fill="#28c840">"npx"</text>
+  <text x="292" y="265" font-family="SF Mono, monospace" font-size="12" fill="#7a7a8a">      "args": [</text>
+  <text x="370" y="265" font-family="SF Mono, monospace" font-size="12" fill="#28c840">"-y", "figma-developer-mcp",</text>
+  <text x="292" y="285" font-family="SF Mono, monospace" font-size="12" fill="#28c840">               "--figma-api-key=YOUR_KEY"</text>
+  <text x="292" y="305" font-family="SF Mono, monospace" font-size="12" fill="#7a7a8a">      ]</text>
+  <text x="292" y="325" font-family="SF Mono, monospace" font-size="12" fill="#7a7a8a">    {"}"},</text>
+
+  <!-- Edit Config button -->
+  <rect x="270" y="355" width="140" height="34" rx="6" fill="#2a2a3a"/>
+  <text x="340" y="377" font-family="SF Pro, system-ui" font-size="13" fill="#e8e8ed" text-anchor="middle">Edit Config</text>
+
+  <!-- Connected indicator -->
+  <circle cx="448" cy="372" r="6" fill="#28c840"/>
+  <text x="462" y="377" font-family="SF Pro, system-ui" font-size="13" fill="#28c840">Figma MCP connected</text>
+
+</svg>

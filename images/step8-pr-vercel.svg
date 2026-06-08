@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <defs>
+    <clipPath id="frame"><rect width="900" height="520" rx="12"/></clipPath>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.4"/></filter>
+  </defs>
+  <rect width="900" height="520" rx="12" fill="#1e1e2e" clip-path="url(#frame)"/>
+  <!-- Chrome bar -->
+  <rect width="900" height="44" fill="#2a2a3a"/>
+  <!-- Traffic lights -->
+  <circle cx="22" cy="22" r="6" fill="#ff5f57"/>
+  <circle cx="42" cy="22" r="6" fill="#febc2e"/>
+  <circle cx="62" cy="22" r="6" fill="#28c840"/>
+  <!-- URL bar -->
+  <rect x="100" y="10" width="700" height="24" rx="12" fill="#13131f"/>
+  <text x="450" y="26" font-family="SF Mono, monospace" font-size="12" fill="#7a7a8a" text-anchor="middle">github.com/akanksha-designs/UX-CC-Trial/pull/1</text>
+  <!-- Content area -->
+  
+  <!-- PR title -->
+  <text x="30" y="80" font-family="SF Pro, system-ui" font-size="18" fill="#e8e8ed" font-weight="700">Update hero colour to Primary/500 from Figma tokens</text>
+  <rect x="30" y="90" width="60" height="22" rx="11" fill="rgba(40,200,64,0.15)"/>
+  <text x="60" y="105" font-family="SF Pro, system-ui" font-size="11" fill="#28c840" text-anchor="middle">Open</text>
+  <text x="100" y="105" font-family="SF Pro, system-ui" font-size="12" fill="#7a7a8a">akanksha wants to merge 1 commit into main from design/update-hero-colours</text>
+
+  <rect x="30" y="118" width="840" height="1" fill="#2a2a3a"/>
+
+  <!-- Vercel bot comment -->
+  <rect x="30" y="130" width="840" height="140" rx="8" fill="#13131f" stroke="#2a2a3a" stroke-width="1"/>
+  <circle cx="58" cy="162" r="16" fill="#0d0d0f"/>
+  <text x="58" y="167" font-family="SF Pro, system-ui" font-size="10" fill="#e8e8ed" text-anchor="middle">▲</text>
+  <text x="86" y="158" font-family="SF Pro, system-ui" font-size="13" fill="#e8e8ed" font-weight="600">vercel[bot]</text>
+  <text x="200" y="158" font-family="SF Pro, system-ui" font-size="12" fill="#7a7a8a">commented 1 minute ago</text>
+
+  <text x="56" y="185" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">🔍 The latest updates on your projects. Learn more about Vercel for Git.</text>
+
+  <rect x="56" y="198" width="790" height="1" fill="#2a2a3a"/>
+  <text x="70" y="220" font-family="SF Pro, system-ui" font-size="12" fill="#7a7a8a" font-weight="600">NAME</text>
+  <text x="400" y="220" font-family="SF Pro, system-ui" font-size="12" fill="#7a7a8a" font-weight="600">STATUS</text>
+  <text x="560" y="220" font-family="SF Pro, system-ui" font-size="12" fill="#7a7a8a" font-weight="600">PREVIEW URL</text>
+  <rect x="56" y="226" width="790" height="1" fill="#2a2a3a"/>
+
+  <text x="70" y="250" font-family="SF Pro, system-ui" font-size="13" fill="#e8e8ed">UX-CC-Trial</text>
+  <rect x="390" y="238" width="80" height="22" rx="11" fill="rgba(40,200,64,0.15)"/>
+  <text x="430" y="253" font-family="SF Pro, system-ui" font-size="11" fill="#28c840" text-anchor="middle">✓ Ready</text>
+  <text x="560" y="250" font-family="SF Mono, monospace" font-size="12" fill="#7c6ef7">ux-cc-trial-git-design-update.vercel.app</text>
+
+  <!-- Approve & merge -->
+  <rect x="30" y="285" width="840" height="80" rx="8" fill="#13131f" stroke="#28c840" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="50" y="318" font-family="SF Pro, system-ui" font-size="14" fill="#e8e8ed" font-weight="600">✓ Review approved · Ready to merge</text>
+  <text x="50" y="342" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">1 approval · 0 requested changes · All checks passed</text>
+  <rect x="650" y="298" width="200" height="36" rx="6" fill="#28c840"/>
+  <text x="750" y="321" font-family="SF Pro, system-ui" font-size="13" fill="#000" text-anchor="middle" font-weight="700">Merge pull request</text>
+
+</svg>

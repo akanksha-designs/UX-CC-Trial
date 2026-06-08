@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <defs>
+    <clipPath id="frame"><rect width="900" height="520" rx="12"/></clipPath>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.4"/></filter>
+  </defs>
+  <rect width="900" height="520" rx="12" fill="#1e1e2e" clip-path="url(#frame)"/>
+  <!-- Chrome bar -->
+  <rect width="900" height="44" fill="#2a2a3a"/>
+  <!-- Traffic lights -->
+  <circle cx="22" cy="22" r="6" fill="#ff5f57"/>
+  <circle cx="42" cy="22" r="6" fill="#febc2e"/>
+  <circle cx="62" cy="22" r="6" fill="#28c840"/>
+  <!-- URL bar -->
+  <rect x="100" y="10" width="700" height="24" rx="12" fill="#13131f"/>
+  <text x="450" y="26" font-family="SF Mono, monospace" font-size="12" fill="#7a7a8a" text-anchor="middle">github.com / Settings / Developer Settings / Personal access tokens</text>
+  <!-- Content area -->
+  
+  <!-- Sidebar -->
+  <rect x="0" y="44" width="220" height="476" fill="#161620"/>
+  <text x="20" y="80" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a" font-weight="600">DEVELOPER SETTINGS</text>
+  <rect x="0" y="88" width="220" height="1" fill="#2a2a3a"/>
+  <rect x="0" y="89" width="4" height="36" fill="#7c6ef7"/>
+  <rect x="0" y="89" width="220" height="36" fill="rgba(124,110,247,0.08)"/>
+  <text x="20" y="113" font-family="SF Pro, system-ui" font-size="13" fill="#e8e8ed" font-weight="500">Personal access tokens</text>
+  <text x="20" y="148" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">OAuth Apps</text>
+  <text x="20" y="180" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">GitHub Apps</text>
+
+  <!-- Main content -->
+  <text x="260" y="90" font-family="SF Pro, system-ui" font-size="22" fill="#e8e8ed" font-weight="700">Personal access tokens (classic)</text>
+  <text x="260" y="115" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">Tokens you have generated that can be used to access the GitHub API.</text>
+
+  <!-- Generate button -->
+  <rect x="680" y="70" width="190" height="34" rx="6" fill="#7c6ef7"/>
+  <text x="775" y="91" font-family="SF Pro, system-ui" font-size="13" fill="#fff" font-weight="600" text-anchor="middle">Generate new token</text>
+
+  <!-- Token list header -->
+  <rect x="240" y="140" width="640" height="1" fill="#2a2a3a"/>
+  <text x="260" y="175" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a" font-weight="600">TOKEN NAME</text>
+  <text x="500" y="175" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a" font-weight="600">SCOPES</text>
+  <text x="700" y="175" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a" font-weight="600">EXPIRES</text>
+  <rect x="240" y="182" width="640" height="1" fill="#2a2a3a"/>
+
+  <!-- Token row -->
+  <rect x="240" y="183" width="640" height="50" fill="rgba(40,200,64,0.04)"/>
+  <text x="260" y="214" font-family="SF Mono, monospace" font-size="13" fill="#e8e8ed">UX-CC-Trial</text>
+  <rect x="490" y="200" width="60" height="20" rx="10" fill="rgba(40,200,64,0.15)"/>
+  <text x="520" y="214" font-family="SF Pro, system-ui" font-size="11" fill="#28c840" text-anchor="middle">repo</text>
+  <text x="700" y="214" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">No expiration</text>
+
+  <!-- Callout box -->
+  <rect x="240" y="260" width="640" height="80" rx="8" fill="rgba(124,110,247,0.08)" stroke="#7c6ef7" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="264" y="288" font-family="SF Pro, system-ui" font-size="13" fill="#7c6ef7" font-weight="600">💡 Use this token as your Git password</text>
+  <text x="264" y="310" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">GitHub no longer accepts account passwords for Git operations.</text>
+  <text x="264" y="328" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">Copy the token and paste it when prompted for a password in terminal.</text>
+
+</svg>

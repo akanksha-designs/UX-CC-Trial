@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <defs>
+    <clipPath id="frame"><rect width="900" height="520" rx="12"/></clipPath>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.4"/></filter>
+  </defs>
+  <rect width="900" height="520" rx="12" fill="#1e1e2e" clip-path="url(#frame)"/>
+  <!-- Chrome bar -->
+  <rect width="900" height="44" fill="#2a2a3a"/>
+  <!-- Traffic lights -->
+  <circle cx="22" cy="22" r="6" fill="#ff5f57"/>
+  <circle cx="42" cy="22" r="6" fill="#febc2e"/>
+  <circle cx="62" cy="22" r="6" fill="#28c840"/>
+  <!-- URL bar -->
+  <rect x="100" y="10" width="700" height="24" rx="12" fill="#13131f"/>
+  <text x="450" y="26" font-family="SF Mono, monospace" font-size="12" fill="#7a7a8a" text-anchor="middle">ux-cc-trial.vercel.app</text>
+  <!-- Content area -->
+  
+  <!-- Deployed site nav -->
+  <rect x="0" y="44" width="900" height="52" fill="rgba(15,15,17,0.95)"/>
+  <rect x="0" y="95" width="900" height="1" fill="#2a2a3a"/>
+  <text x="52" y="76" font-family="SF Pro, system-ui" font-size="16" fill="#7c6ef7" font-weight="700">AK</text>
+  <text x="680" y="76" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">Work</text>
+  <text x="740" y="76" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">About</text>
+  <text x="800" y="76" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">Contact</text>
+
+  <!-- Hero -->
+  <rect x="0" y="96" width="900" height="300" fill="#0f0f11"/>
+  <text x="52" y="150" font-family="SF Pro, system-ui" font-size="11" fill="#7c6ef7" font-weight="600" letter-spacing="2">UX DESIGNER · DESIGN SYSTEMS · AI WORKFLOWS</text>
+  <text x="52" y="195" font-family="SF Pro, system-ui" font-size="38" fill="#e8e8ed" font-weight="700">Designing at the</text>
+  <text x="52" y="238" font-family="SF Pro, system-ui" font-size="38" fill="#e8e8ed" font-weight="700">intersection of</text>
+  <text x="52" y="281" font-family="SF Pro, system-ui" font-size="38" fill="#4f3fbf" font-weight="700" font-style="italic">clarity and complexity.</text>
+  <rect x="52" y="310" width="120" height="36" rx="8" fill="#7c6ef7"/>
+  <text x="112" y="333" font-family="SF Pro, system-ui" font-size="13" fill="#fff" text-anchor="middle" font-weight="600">View Work</text>
+
+  <!-- Deploy success banner -->
+  <rect x="0" y="396" width="900" height="78" fill="#13131f"/>
+  <rect x="0" y="396" width="900" height="1" fill="#2a2a3a"/>
+  <rect x="0" y="396" width="4" height="78" fill="#28c840"/>
+  <text x="28" y="425" font-family="SF Pro, system-ui" font-size="14" fill="#28c840" font-weight="600">✓ Production deployment complete</text>
+  <text x="28" y="448" font-family="SF Pro, system-ui" font-size="13" fill="#7a7a8a">Deployed from design/update-hero-colours → main · 34 seconds ago</text>
+  <text x="28" y="466" font-family="SF Mono, monospace" font-size="12" fill="#7c6ef7">ux-cc-trial.vercel.app  ·  commit 3f7a2c1</text>
+
+</svg>

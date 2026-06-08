@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <defs>
+    <clipPath id="frame"><rect width="900" height="520" rx="12"/></clipPath>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.4"/></filter>
+  </defs>
+  <rect width="900" height="520" rx="12" fill="#1e1e2e" clip-path="url(#frame)"/>
+  <!-- Chrome bar -->
+  <rect width="900" height="44" fill="#2a2a3a"/>
+  <!-- Traffic lights -->
+  <circle cx="22" cy="22" r="6" fill="#ff5f57"/>
+  <circle cx="42" cy="22" r="6" fill="#febc2e"/>
+  <circle cx="62" cy="22" r="6" fill="#28c840"/>
+  <!-- URL bar -->
+  <rect x="100" y="10" width="700" height="24" rx="12" fill="#13131f"/>
+  <text x="450" y="26" font-family="SF Mono, monospace" font-size="12" fill="#7a7a8a" text-anchor="middle">Claude Code — UX-CC-Trial project</text>
+  <!-- Content area -->
+  
+  <!-- Split layout -->
+  <!-- Left: Claude chat -->
+  <rect x="0" y="44" width="430" height="476" fill="#13131f"/>
+  <text x="20" y="80" font-family="SF Pro, system-ui" font-size="14" fill="#e8e8ed" font-weight="600">Claude Code</text>
+  <rect x="0" y="88" width="430" height="1" fill="#2a2a3a"/>
+
+  <!-- User message -->
+  <rect x="20" y="104" width="390" height="80" rx="8" fill="#1e1e2e"/>
+  <text x="36" y="126" font-family="SF Pro, system-ui" font-size="12" fill="#7a7a8a" font-weight="600">YOU</text>
+  <text x="36" y="146" font-family="SF Pro, system-ui" font-size="13" fill="#e8e8ed">Update the hero heading to use the</text>
+  <text x="36" y="164" font-family="SF Pro, system-ui" font-size="13" fill="#e8e8ed">Primary/500 colour from this Figma</text>
+  <text x="36" y="180" font-family="SF Mono, monospace" font-size="11" fill="#7c6ef7">figma.com/design/abc123/Brand-Tokens</text>
+
+  <!-- Claude response -->
+  <rect x="20" y="200" width="390" height="140" rx="8" fill="rgba(124,110,247,0.06)" stroke="#7c6ef7" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="36" y="222" font-family="SF Pro, system-ui" font-size="12" fill="#7c6ef7" font-weight="600">CLAUDE</text>
+  <text x="36" y="244" font-family="SF Pro, system-ui" font-size="13" fill="#e8e8ed">I can see the Figma file. The Primary/500</text>
+  <text x="36" y="262" font-family="SF Pro, system-ui" font-size="13" fill="#e8e8ed">token is <tspan font-family="SF Mono, monospace" fill="#28c840">#4f3fbf</tspan>. Updating style.css now...</text>
+  <rect x="36" y="276" width="360" height="52" rx="6" fill="#0d0d0f"/>
+  <text x="52" y="296" font-family="SF Mono, monospace" font-size="11" fill="#7a7a8a">.hero-heading em {"{"}</text>
+  <text x="52" y="312" font-family="SF Mono, monospace" font-size="11" fill="#28c840">  color: var(--color-primary-500);</text>
+  <text x="52" y="328" font-family="SF Mono, monospace" font-size="11" fill="#7a7a8a">{"}"}</text>
+
+  <!-- File edited indicator -->
+  <rect x="20" y="356" width="390" height="32" rx="6" fill="rgba(40,200,64,0.08)"/>
+  <text x="36" y="377" font-family="SF Pro, system-ui" font-size="12" fill="#28c840">✓ Edited style.css · Live at localhost:3001</text>
+
+  <!-- Divider -->
+  <rect x="430" y="44" width="1" height="476" fill="#2a2a3a"/>
+
+  <!-- Right: Figma frame preview -->
+  <rect x="431" y="44" width="469" height="476" fill="#0f0f11"/>
+  <text x="460" y="80" font-family="SF Pro, system-ui" font-size="14" fill="#e8e8ed" font-weight="600">Figma — Brand Tokens</text>
+  <rect x="431" y="88" width="469" height="1" fill="#2a2a3a"/>
+
+  <!-- Colour token grid -->
+  <text x="455" y="118" font-family="SF Pro, system-ui" font-size="12" fill="#7a7a8a" font-weight="600">PRIMARY</text>
+  <rect x="455" y="128" width="50" height="50" rx="6" fill="#1a1360"/>
+  <text x="455" y="194" font-family="SF Mono, monospace" font-size="10" fill="#7a7a8a">100</text>
+  <rect x="515" y="128" width="50" height="50" rx="6" fill="#2d229e"/>
+  <text x="515" y="194" font-family="SF Mono, monospace" font-size="10" fill="#7a7a8a">200</text>
+  <rect x="575" y="128" width="50" height="50" rx="6" fill="#3d2fc4"/>
+  <text x="575" y="194" font-family="SF Mono, monospace" font-size="10" fill="#7a7a8a">300</text>
+  <rect x="635" y="128" width="50" height="50" rx="6" fill="#4538d4"/>
+  <text x="635" y="194" font-family="SF Mono, monospace" font-size="10" fill="#7a7a8a">400</text>
+  <rect x="695" y="120" width="66" height="66" rx="8" fill="#4f3fbf" stroke="#7c6ef7" stroke-width="2"/>
+  <text x="728" y="202" font-family="SF Mono, monospace" font-size="10" fill="#7c6ef7" text-anchor="middle" font-weight="700">500 ←</text>
+  <rect x="771" y="128" width="50" height="50" rx="6" fill="#6b5fd4"/>
+  <text x="771" y="194" font-family="SF Mono, monospace" font-size="10" fill="#7a7a8a">600</text>
+
+  <text x="455" y="230" font-family="SF Mono, monospace" font-size="11" fill="#7c6ef7">#4f3fbf — Primary/500</text>
+  <text x="455" y="248" font-family="SF Pro, system-ui" font-size="12" fill="#7a7a8a">Used for: headings, CTA highlights, accent text</text>
+
+</svg>
