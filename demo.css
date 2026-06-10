@@ -1,0 +1,378 @@
+/* ── Demo page ── */
+
+/* ── Hero ── */
+.demo-hero {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 100px 48px 80px;
+  min-height: calc(100vh - var(--nav-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.demo-hero-sub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+/* ── Doc section ── */
+.doc-section {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 48px 120px;
+}
+
+.doc-header {
+  padding: 64px 0 48px;
+  border-top: 1px solid var(--border);
+}
+
+.doc-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.doc-title {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.doc-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* ── Surfaces ── */
+.doc-surface {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 32px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.doc-surface--light {
+  background: #F2F4F8;
+}
+
+.doc-surface--dark {
+  background: #0D1B32;
+}
+
+.surface-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.doc-surface--light .surface-label { color: #4C6580; }
+.doc-surface--dark  .surface-label { color: #7590AA; }
+
+/* ── Button doc grid ── */
+.btn-doc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.btn-doc-col { display: flex; flex-direction: column; gap: 10px; }
+
+.col-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.doc-surface--light .col-label { color: #4C6580; }
+.doc-surface--dark  .col-label { color: #7590AA; }
+
+.btn-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.doc-surface--light .btn-meta { color: #7590AA; }
+.doc-surface--dark  .btn-meta { color: #4C6580; }
+
+/* ════════════════════════════════════════
+   DESIGN SYSTEM BUTTONS — exact Sapiens tokens
+   ════════════════════════════════════════ */
+
+.ds-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  border-radius: 6px; /* --radius-sm */
+  font-family: var(--font-sans);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 120ms cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 120ms cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 120ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  text-decoration: none;
+  box-shadow: 0 0 1px rgba(3,11,23,.30), 0 1px 1px rgba(3,11,23,.15);
+}
+
+.ds-btn:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.ds-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(107 145 204 / 0.38);
+}
+
+/* ── Sizes ── */
+.ds-btn--sm  { height: 28px; padding: 0 10px; font-size: 11px; }
+.ds-btn--md  { height: 32px; padding: 0 12px; font-size: 13px; }
+.ds-btn--lg  { height: 40px; padding: 0 16px; font-size: 14px; }
+
+.ds-btn--icon-only {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.ds-btn--icon-left { gap: 6px; }
+
+/* ════════════════════════════════════════
+   LIGHT SURFACE — exact values from Figma
+   ════════════════════════════════════════ */
+
+/* Primary / Brand — light */
+.ds-btn--primary {
+  background: #0D256F;
+  color: #ffffff;
+}
+.ds-btn--primary:hover:not(:disabled) { background: #0A1B52; }
+.ds-btn--primary:active:not(:disabled) { background: #061237; }
+
+/* Secondary — light: #EDEDED bg, #282828 text */
+.ds-btn--secondary {
+  background: #EDEDED;
+  color: #282828;
+  box-shadow: none;
+  border: none;
+}
+.ds-btn--secondary:hover:not(:disabled) { background: #DCDCDC; }
+
+/* Ghost — light */
+.ds-btn--ghost {
+  background: transparent;
+  color: #0D256F;
+  box-shadow: none;
+}
+.ds-btn--ghost:hover:not(:disabled) {
+  background: rgba(13, 37, 111, 0.06);
+  color: #0A1B52;
+}
+
+/* Outline — light */
+.ds-btn--outline {
+  background: transparent;
+  color: #0D256F;
+  border: 1px solid #0D256F;
+  box-shadow: none;
+}
+.ds-btn--outline:hover:not(:disabled) {
+  background: rgba(13, 37, 111, 0.06);
+}
+
+/* Danger — light: #A10101 bg, white text */
+.ds-btn--danger {
+  background: #A10101;
+  color: #ffffff;
+}
+.ds-btn--danger:hover:not(:disabled) { background: #820202; }
+
+/* Success — light */
+.ds-btn--success {
+  background: #14451A;
+  color: #ffffff;
+}
+.ds-btn--success:hover:not(:disabled) { background: #226D29; }
+
+/* Warning — light */
+.ds-btn--warning {
+  background: #FFC200;
+  color: #1F1700;
+}
+.ds-btn--warning:hover:not(:disabled) { background: #CC9B00; }
+
+/* Info — light */
+.ds-btn--info {
+  background: #1193D0;
+  color: #ffffff;
+}
+.ds-btn--info:hover:not(:disabled) { background: #0B72A2; }
+
+/* ════════════════════════════════════════
+   DARK SURFACE — inverse buttons (from Figma)
+   Primary on dark = light bg + dark text
+   ════════════════════════════════════════ */
+
+/* Inverse Primary — #E9EEF6 bg, #0A1B52 text */
+.doc-surface--dark .ds-btn--primary {
+  background: #E9EEF6;
+  color: #0A1B52;
+  box-shadow: none;
+}
+.doc-surface--dark .ds-btn--primary:hover:not(:disabled) {
+  background: #DCE2EF;
+  color: #0A1B52;
+}
+.doc-surface--dark .ds-btn--primary:active:not(:disabled) {
+  background: #9BAAD4;
+}
+
+/* Inverse Secondary — #EDEDED bg, #282828 text */
+.doc-surface--dark .ds-btn--secondary {
+  background: #EDEDED;
+  color: #282828;
+  border: none;
+  box-shadow: none;
+}
+.doc-surface--dark .ds-btn--secondary:hover:not(:disabled) { background: #DCDCDC; }
+
+/* Inverse Ghost */
+.doc-surface--dark .ds-btn--ghost {
+  background: transparent;
+  color: #E8EDF5;
+  box-shadow: none;
+}
+.doc-surface--dark .ds-btn--ghost:hover:not(:disabled) {
+  background: rgba(233, 238, 246, 0.10);
+  color: #ffffff;
+}
+
+/* Inverse Outline */
+.doc-surface--dark .ds-btn--outline {
+  background: transparent;
+  color: #E9EEF6;
+  border: 1px solid #E9EEF6;
+  box-shadow: none;
+}
+.doc-surface--dark .ds-btn--outline:hover:not(:disabled) {
+  background: rgba(233, 238, 246, 0.10);
+}
+
+/* Danger — dark: #C1443C bg, white text */
+.doc-surface--dark .ds-btn--danger {
+  background: #C1443C;
+  color: #ffffff;
+}
+.doc-surface--dark .ds-btn--danger:hover:not(:disabled) { background: #A10101; }
+
+/* Success — dark */
+.doc-surface--dark .ds-btn--success {
+  background: #34D399;
+  color: #052e1a;
+}
+.doc-surface--dark .ds-btn--success:hover:not(:disabled) { background: #2ABD89; }
+
+/* Warning — dark */
+.doc-surface--dark .ds-btn--warning {
+  background: #FBBF24;
+  color: #1F1700;
+}
+.doc-surface--dark .ds-btn--warning:hover:not(:disabled) { background: #F0B520; }
+
+/* Info — dark */
+.doc-surface--dark .ds-btn--info {
+  background: #60A5FA;
+  color: #07101F;
+}
+.doc-surface--dark .ds-btn--info:hover:not(:disabled) { background: #4D96F0; }
+
+/* ── Token reference ── */
+.doc-tokens {
+  border-top: 1px solid var(--border);
+  padding-top: 48px;
+  margin-top: 48px;
+}
+
+.token-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 8px;
+}
+
+.token-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.token-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-xs);
+  flex-shrink: 0;
+}
+
+.token-name {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--primary);
+  flex: 1;
+}
+
+.token-value {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.token-usage {
+  font-size: 11px;
+  color: var(--text-subtle);
+  margin-left: auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .btn-doc-grid { grid-template-columns: 1fr 1fr; }
+  .demo-hero { padding: 60px 24px 48px; }
+  .doc-section { padding: 0 24px 80px; }
+  .doc-surface { padding: 24px; }
+}
+
+@media (max-width: 600px) {
+  .btn-doc-grid { grid-template-columns: 1fr; }
+  .demo-hero { padding: 48px 20px 40px; }
+  .doc-section { padding: 0 20px 60px; }
+  .token-grid { grid-template-columns: 1fr; }
+}

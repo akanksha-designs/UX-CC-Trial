@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Demo — UX-CC-Trial</title>
+  <title>Demo — Sapiens Design System</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="demo.css" />
 </head>
 <body>
   <header class="site-header">
@@ -19,15 +20,305 @@
   </header>
 
   <main>
-    <section class="hero" style="min-height: calc(100vh - 64px); display: flex; flex-direction: column; justify-content: center;">
+
+    <!-- ── Hero ── -->
+    <section class="demo-hero">
       <p class="hero-label">Live Session · Vibe-Coding Demo</p>
       <h1 class="hero-heading">This is where the<br /><em>magic happens.</em></h1>
-      <p style="color: var(--color-muted); font-size: 18px; max-width: 520px; line-height: 1.7; margin-bottom: 40px;">
-        Start vibe-coding — bring a Figma frame, share it with Claude, and watch the design land in code. Live.
-      </p>
-      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-        <a href="index.html" class="btn btn-primary">How it works</a>
+      <p class="demo-hero-sub">Start vibe-coding — bring a Figma frame, share it with Claude, and watch the design land in code. Live.</p>
+      <a href="index.html" class="btn btn-primary">How it works</a>
+    </section>
+
+    <!-- ── Button Documentation ── -->
+    <section class="doc-section">
+
+      <div class="doc-header">
+        <p class="doc-eyebrow">Design System · Buttons</p>
+        <h2 class="doc-title">Button</h2>
+        <p class="doc-desc">All variants, sizes, and states — matched exactly to the Sapiens Figma design tokens.</p>
       </div>
+
+      <!-- Light surface -->
+      <div class="doc-surface doc-surface--light">
+        <p class="surface-label">Light surface</p>
+
+        <div class="btn-doc-grid">
+
+          <!-- Brand column -->
+          <div class="btn-doc-col">
+            <p class="col-label">Brand</p>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--primary ds-btn--lg">Label</button>
+              <span class="btn-meta">Primary · LG</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--primary ds-btn--md">Label</button>
+              <span class="btn-meta">Primary · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--primary ds-btn--sm">Label</button>
+              <span class="btn-meta">Primary · SM</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--secondary ds-btn--md">Label</button>
+              <span class="btn-meta">Secondary · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--ghost ds-btn--md">Label</button>
+              <span class="btn-meta">Ghost · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--outline ds-btn--md">Label</button>
+              <span class="btn-meta">Outline · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--primary ds-btn--md" disabled>Label</button>
+              <span class="btn-meta">Disabled</span>
+            </div>
+          </div>
+
+          <!-- Semantic column -->
+          <div class="btn-doc-col">
+            <p class="col-label">Semantic</p>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--danger ds-btn--lg">Label</button>
+              <span class="btn-meta">Danger · LG</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--danger ds-btn--md">Label</button>
+              <span class="btn-meta">Danger · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--danger ds-btn--sm">Label</button>
+              <span class="btn-meta">Danger · SM</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--success ds-btn--md">Label</button>
+              <span class="btn-meta">Success · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--warning ds-btn--md">Label</button>
+              <span class="btn-meta">Warning · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--info ds-btn--md">Label</button>
+              <span class="btn-meta">Info · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--danger ds-btn--md" disabled>Label</button>
+              <span class="btn-meta">Disabled</span>
+            </div>
+          </div>
+
+          <!-- With icons column -->
+          <div class="btn-doc-col">
+            <p class="col-label">With icons</p>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--primary ds-btn--lg ds-btn--icon-left">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                Label
+              </button>
+              <span class="btn-meta">Icon left · LG</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--primary ds-btn--md ds-btn--icon-left">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                Label
+              </button>
+              <span class="btn-meta">Icon left · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--secondary ds-btn--md ds-btn--icon-left">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
+                Label
+              </button>
+              <span class="btn-meta">Icon left · Secondary</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--icon-only ds-btn--primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+              </button>
+              <span class="btn-meta">Icon only · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--icon-only ds-btn--ghost">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M3 12h3m12 0h3M12 3v3m0 12v3"/></svg>
+              </button>
+              <span class="btn-meta">Icon only · Ghost</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Dark surface -->
+      <div class="doc-surface doc-surface--dark">
+        <p class="surface-label">Dark surface</p>
+
+        <div class="btn-doc-grid">
+
+          <!-- Brand column -->
+          <div class="btn-doc-col">
+            <p class="col-label">Brand</p>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--primary ds-btn--lg">Label</button>
+              <span class="btn-meta">Primary · LG</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--primary ds-btn--md">Label</button>
+              <span class="btn-meta">Primary · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--primary ds-btn--sm">Label</button>
+              <span class="btn-meta">Primary · SM</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--secondary ds-btn--md">Label</button>
+              <span class="btn-meta">Secondary · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--ghost ds-btn--md">Label</button>
+              <span class="btn-meta">Ghost · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--outline ds-btn--md">Label</button>
+              <span class="btn-meta">Outline · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--primary ds-btn--md" disabled>Label</button>
+              <span class="btn-meta">Disabled</span>
+            </div>
+          </div>
+
+          <!-- Semantic column -->
+          <div class="btn-doc-col">
+            <p class="col-label">Semantic</p>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--danger ds-btn--lg">Label</button>
+              <span class="btn-meta">Danger · LG</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--danger ds-btn--md">Label</button>
+              <span class="btn-meta">Danger · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--danger ds-btn--sm">Label</button>
+              <span class="btn-meta">Danger · SM</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--success ds-btn--md">Label</button>
+              <span class="btn-meta">Success · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--warning ds-btn--md">Label</button>
+              <span class="btn-meta">Warning · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--info ds-btn--md">Label</button>
+              <span class="btn-meta">Info · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--danger ds-btn--md" disabled>Label</button>
+              <span class="btn-meta">Disabled</span>
+            </div>
+          </div>
+
+          <!-- With icons column -->
+          <div class="btn-doc-col">
+            <p class="col-label">With icons</p>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--primary ds-btn--lg ds-btn--icon-left">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                Label
+              </button>
+              <span class="btn-meta">Icon left · LG</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--primary ds-btn--md ds-btn--icon-left">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                Label
+              </button>
+              <span class="btn-meta">Icon left · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--secondary ds-btn--md ds-btn--icon-left">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
+                Label
+              </button>
+              <span class="btn-meta">Icon left · Secondary</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--icon-only ds-btn--primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+              </button>
+              <span class="btn-meta">Icon only · MD</span>
+            </div>
+            <div class="btn-row">
+              <button class="ds-btn ds-btn--icon-only ds-btn--ghost">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M3 12h3m12 0h3M12 3v3m0 12v3"/></svg>
+              </button>
+              <span class="btn-meta">Icon only · Ghost</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Token reference -->
+      <div class="doc-tokens">
+        <p class="doc-eyebrow" style="margin-bottom: 24px;">Token reference</p>
+        <div class="token-grid">
+          <div class="token-row">
+            <span class="token-swatch" style="background: #0D256F;"></span>
+            <code class="token-name">button-contained-primary-default</code>
+            <span class="token-value">#0D256F</span>
+            <span class="token-usage">Primary · light surface</span>
+          </div>
+          <div class="token-row">
+            <span class="token-swatch" style="background: #0A1B52;"></span>
+            <code class="token-name">button-contained-primary-hover</code>
+            <span class="token-value">#0A1B52</span>
+            <span class="token-usage">Primary hover · light surface</span>
+          </div>
+          <div class="token-row">
+            <span class="token-swatch" style="background: #E9EEF6; border: 1px solid #9BAAD4;"></span>
+            <code class="token-name">button-contained-inverse-primary-default</code>
+            <span class="token-value">#E9EEF6</span>
+            <span class="token-usage">Primary · dark surface</span>
+          </div>
+          <div class="token-row">
+            <span class="token-swatch" style="background: #EDEDED; border: 1px solid #ccc;"></span>
+            <code class="token-name">button-contained-secondary-default</code>
+            <span class="token-value">#EDEDED</span>
+            <span class="token-usage">Secondary · both surfaces</span>
+          </div>
+          <div class="token-row">
+            <span class="token-swatch" style="background: #A10101;"></span>
+            <code class="token-name">button-contained-danger-default (light)</code>
+            <span class="token-value">#A10101</span>
+            <span class="token-usage">Danger · light surface</span>
+          </div>
+          <div class="token-row">
+            <span class="token-swatch" style="background: #C1443C;"></span>
+            <code class="token-name">button-contained-danger-default (dark)</code>
+            <span class="token-value">#C1443C</span>
+            <span class="token-usage">Danger · dark surface</span>
+          </div>
+          <div class="token-row">
+            <span class="token-swatch" style="background: #14451A;"></span>
+            <code class="token-name">--success (light)</code>
+            <span class="token-value">#14451A</span>
+            <span class="token-usage">Success · light surface</span>
+          </div>
+          <div class="token-row">
+            <span class="token-swatch" style="background: #34D399;"></span>
+            <code class="token-name">--success (dark)</code>
+            <span class="token-value">#34D399</span>
+            <span class="token-usage">Success · dark surface</span>
+          </div>
+        </div>
+      </div>
+
     </section>
   </main>
 
